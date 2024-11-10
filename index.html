@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>شجرة عائلة نادي أدِيب</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'><link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <div class="parent">
+                <div class="top-div">
+                   <img src="logo.png" alt="">
+                </div>
+                <!-- <ul class="progress-bar">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul> -->
+            </div> 
+
+            <form method="post" action="https://script.google.com/macros/s/AKfycbz_68KCKOrSnNoAN4xY4P3-oYaYf13TamYcan0U7fhznPD5K7ip-8gySuhz56hjUa8V/exec" name="MyGroup">
+
+            <div class="main active">
+                <div class="content">
+                   <h4>     📊🌳تحديث بيانات الشجرة   </h4>
+                   <p>
+                    تغيير الألوان المُفضلة لأعضاء نادي أدِيب
+                  </p>
+                </div>
+                <div class="input-text">
+                  <input id="input" type="text" placeholder="أسمك يـ أدِيب/ـه "  name="الأسم الثلاثي" require>
+                  <span> ✍🏻الأسم الثلاثي </span>
+              </div>  
+                
+              <div id="swatch">
+                <h4> 🦦لو سمحت أختر لونك المُفضل ترا ما بنغير </h4>
+
+                <div class="swatch-1">
+                <div class="color1">
+                <input type="color" id="color" name="اللون الثانوي" value="#98c93c">
+                <div class="info">
+                  <h1>اللون الثانوي</h1>
+                </div>
+              </div>
+              
+              <div class="color2"> 
+                <input type="color" id="color" name="اللون الأساسي" value="#009345">
+                <div class="info">
+                  <h1>اللون الأساسي</h1>
+                </div>
+                </div>
+              </div>
+            </div>
+                <div class="button">
+                    <button  type="submit" value="Submit" class="create-workspace"> خلاص غيرت لوني </button>
+                </div>
+            </div> 
+
+
+            <div class="main">
+
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+                <div class="content">
+                   <h2 style="color: #009345;"> تم تغيير لونك المُفضل  <br>   💚🌳في شجرة عائلة أدِيب </h2>
+                   <p> 
+                    🦦ترا مافي تغيير مره ثانية، فـ أتمنى ما تجي تقول غيرو لوني
+                  </p>
+                </div> 
+
+                <div class="finish">
+              <!-- <button class="twitter">     <a href="https://twitter.com/AB_KFU" target="_blank"> الذهاب إلى تويتر  </a></button> -->
+                <button class="group">  <a href="https://chat.whatsapp.com/FsgdBOlOohd0sEsSyrBF3l" target="_blank"> 🏡تقدر ترجع لبيتك الآن </a></button> 
+                  <!-- <a href="https://twitter.com/AB_KFU" target="_blank" class="twitter">الذهاب إلى تويتر</a>
+                  <a href="https://web.telegram.org/a/#-1001825412173" target="_blank" class="group">الرجوع الى القروب</a> -->
+
+              </div>
+
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+  </form> 
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz_68KCKOrSnNoAN4xY4P3-oYaYf13TamYcan0U7fhznPD5K7ip-8gySuhz56hjUa8V/exec'
+      const form = document.forms['MyGroup']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        // .then(response => alert("Thank you! your form is submitted successfully." ))
+        // .then(() => {  window.location.reload(); })
+        // .catch(error => console.error('Error!', error.message))
+      })
+      </script>
+
+      </body>
+</html>
